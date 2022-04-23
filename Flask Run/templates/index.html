@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Financial risk prediction</title>
+</head>
+
+
+<body background="https://previews.123rf.com/images/file404/file4041308/file404130800034/21376203-financial-risk-icon.jpg" text="black">
+
+ <div class="login">
+	<center><h1>financial risk Prediction</h1></center>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+<h1>Please enter the following details</h1>
+
+
+</style></head>
+
+      <label for="Housing">Housing:</label>
+        <select id="Housing" name="Housing">
+            <option value=1>own</option>
+            <option value=0>free</option>
+            <option value=2>rent</option>
+        </select> &nbsp;&nbsp;<br>
+        
+</br>
+     <label for="Sex">Sex:</label>
+        <select id="Sex" name="Sex">
+            <option value=1>male</option>
+            <option value=0>female</option>
+        </select> &nbsp;&nbsp;<br>
+</br>
+     <label for="Saving accounts">Saving accounts:</label>
+        <select id="Saving accounts" name="Saving accounts">
+            <option value=0>little</option>
+            <option value=2>quite rich</option>
+            <option value=3>rich</option>
+            <option value=1>moderate</option>
+        </select> &nbsp;&nbsp;<br>
+              
+ </br>
+     <label for="Checking account">Checking account:</label>
+        <select id="Checking account" name="Checking account">
+            <option value=0>little</option>
+            <option value=2>rich</option>
+            <option value=1>moderate</option>
+        </select> &nbsp;&nbsp;<br>
+                   
+      <label>Age:</label>  
+      <input type="number" min="15" max="100"   name="Age" placeholder="Age" required="required" /><br>
+      
+    <label>Job:</label>  
+      <input type="number" min="0"  max="3"  name="Job" placeholder="Job" required="required" />
+<br>
+    <label>Credit amount:</label>  
+      <input type="number"   name="Credit amount" placeholder="Credit amount" required="required" />
+<br>
+    <label>Duration:</label>  
+      <input type="number"   name="Duration" placeholder="Duration" required="required" /><br>
+    
+<br>
+              
+ </br>
+     <label for="Purpose"Purpose:</label>
+        <select id="Purpose" name="Purpose">
+            <option value=5>radio/TV</option>
+            <option value=3>education</option>
+            <option value=4>furniture/equipment</option>
+            <option value=1>car</option>
+            <option value=0>business</option>
+            <option value=2>domestic appliances</option>
+            <option value=6>repairs</option>
+            <option value=7>vacation/others</option>
+
+
+        </select> &nbsp;&nbsp;<br>
+
+<br><br>
+
+
+<button type="submit" class="btn btn-primary btn-block btn-large" style="height:30px;width:200px">Predict</button>
+
+    </form>
+<br>
+   
+
+   {{ prediction_text }}
+
+
+  <br>
+  <br>
+  <img src="data:image/png;base64,{{url_3}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+  <img src="data:image/png;base64,{{url_1}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+  <img src="data:image/png;base64,{{url_4}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+  <br>
+  <br>
+  <img src="data:image/png;base64,{{url_2}}" alt="Submit Form" height="150" width="711" onerror="this.style.display='none'"/>
+  
+ </div>
+
+
+</body>
+</html>
